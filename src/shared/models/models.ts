@@ -2,8 +2,8 @@ export class Property {
     title: string;
     type: string;
     marker: Marker;
-    rentals: Rental[];
-    expenses: Expense[];
+    rentals: RentalPayment[];
+    expenses: ExpensePayment[];
     owner: Owner;
 }
 
@@ -39,9 +39,16 @@ export class Renter {
     AFM: string;
 }
 
-export class Payment {
+export class RentalPayment {
     property: Property;
     rental: Rental;
+    month: string;
+    year: string;
+}
+
+export class ExpensePayment {
+    property: Property;
+    expense: Expense;
     month: string;
     year: string;
 }
